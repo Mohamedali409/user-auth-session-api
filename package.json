@@ -1,0 +1,22 @@
+{
+  "name": "auth-app-with-session",
+  "version": "1.0.0",
+  "description": "this authentication API with session and joi for validation ",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "joi": "^18.0.2",
+    "mongoose": "^9.3.0",
+    "nodemon": "^3.1.14"
+  }
+}

@@ -1,4 +1,4 @@
-import Joi from "joi"; // لازم J capital في import
+import Joi from "joi";
 
 export const registerValidator = (req, res, next) => {
   const userValidation = Joi.object({
@@ -8,21 +8,15 @@ export const registerValidator = (req, res, next) => {
       .required()
       .messages({ "string.empty": "Username is required" }),
 
-    email: Joi.string()
-      .email()
-      .required()
-      .messages({
-        "string.empty": "Email is required",
-        "string.email": "Invalid email",
-      }),
+    email: Joi.string().email().required().messages({
+      "string.empty": "Email is required",
+      "string.email": "Invalid email",
+    }),
 
-    password: Joi.string()
-      .min(6)
-      .required()
-      .messages({
-        "string.empty": "Password is required",
-        "string.min": "Password must be at least 6 characters",
-      }),
+    password: Joi.string().min(6).required().messages({
+      "string.empty": "Password is required",
+      "string.min": "Password must be at least 6 characters",
+    }),
 
     confirmPassword: Joi.string()
       .required()
